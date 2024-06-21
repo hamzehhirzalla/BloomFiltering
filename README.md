@@ -15,7 +15,26 @@ The project is divided into two main objectives:
    2. Training each array on one of the passwords given by the user to check the similarity.
    3. The training process involves splitting the password into bigrams and using 15 hashing algorithms on each bigram, which will get the final index to mark using the bitwise OR operation.
    4. Using the Jaccard Coefficient algorithm on the two temporarily generated Bloom filters to find the similarity.
+      
+# Django Usage
 
+To accomplish the goal of this project, the Django Rest Framework was used, and two apps were created for this project:
+
+1. **bloomfilter**:
+   This app is responsible for:
+   1. Creating the Bloom filter object.
+   2. Creating the methods/functions to determine the strength of passwords.
+   3. Implementing the Jaccard Coefficient in the bloomfilter app.
+  
+2. **customUser**:
+   This app is responsible for:
+   1. Creating the user object.
+   2. Creating the functions that the user needs to perform actions such as registering, logging in, changing passwords, etc.
+   3. The functions also call the methods/functions from the bloomfilter app to check the strength of the password before taking actions that involve checking the password strength.
+   
+The customUser application takes advantage of the Django authentication method.
+   
+ 
 ## Steps to Run the `password_similarity_project`
 
 ### Step 1: Create a New Environment
