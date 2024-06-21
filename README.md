@@ -1,10 +1,10 @@
 # BloomFiltering
 
-## Steps to Run the Backend
+## Steps to Run the password_similarity_project
 
 ### Step 1: Create a New Environment
 
-- Create a new environment (outside the Mybackend folder):  
+- Create a new environment (outside the password_similarity_project folder):  
   `python -m venv myenv`
 - Activate the environment:  
   - Linux: `source myenv/bin/activate`  
@@ -12,7 +12,7 @@
 
 ### Step 2: Install Dependencies
 
-- Navigate to the directory: `cd Mybackend`
+- Navigate to the directory: `cd password_similarity_project`
 - Install required packages:  
   `pip install -r requirements.txt`
 
