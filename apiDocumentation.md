@@ -59,7 +59,6 @@
   ```json
   {
     "username": "string",
-    ...
   }
   ```
 - **Error Response:**
