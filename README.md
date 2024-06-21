@@ -5,7 +5,8 @@
 ### Step 1: Create a New Environment
 
 - Create a new environment (outside the password_similarity_project folder):  
-  `python -m venv myenv`
+  - Linux: `python3 -m venv myenv`  
+  - Windows: `python -m venv myenv`
 - Activate the environment:  
   - Linux: `source myenv/bin/activate`  
   - Windows: `myenv\Scripts\activate`
