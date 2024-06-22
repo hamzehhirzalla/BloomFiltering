@@ -46,7 +46,7 @@ class RegisterView(generics.CreateAPIView):
         try:
             bf_model = BloomFilterModel.objects.get(pk=bloom_filter_id)
             bf = BloomFilter.load_from_model(bf_model)
-            threshold = 0.9  # You can set this threshold as needed
+            threshold = 0.827  # You can set this threshold as needed
             if bf.check(password, threshold):
                 return Response({'error': 'Password is too weak, choose a stronger one'}, status=status.HTTP_400_BAD_REQUEST)
         except BloomFilterModel.DoesNotExist:
@@ -133,7 +133,7 @@ class ChangePasswordView(views.APIView):
             try:
                 bf_model = BloomFilterModel.objects.get(pk=bloom_filter_id)
                 bf = BloomFilter.load_from_model(bf_model)
-                threshold = 0.9  # You can set this threshold as needed
+                threshold = 0.827  # You can set this threshold as needed
                 if bf.check(new_password, threshold):
                     return Response({'error': 'Password is too weak, choose a stronger one'}, status=status.HTTP_400_BAD_REQUEST)
             except BloomFilterModel.DoesNotExist:
