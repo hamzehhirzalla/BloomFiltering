@@ -45,7 +45,7 @@ class TestPasswordView(views.APIView):
         
         password = request.data.get('password')
         password = ' '+password+' '
-        threshold = request.data.get('threshold', 0.9)
+        threshold = request.data.get('threshold', 0.827)
         
         result = bf.check(password, threshold)
         return Response({'result': result}, status=status.HTTP_200_OK)
